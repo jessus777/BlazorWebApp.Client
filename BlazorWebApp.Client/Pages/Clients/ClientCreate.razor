@@ -1,0 +1,227 @@
+﻿@page "/client/create"
+
+<div class="container-sm">
+    <div class="row">
+        <div class="card shadow-lg mb-4 rounded-3">
+            <h5 class="card-header bg-white">Crear Cliente</h5>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="alert alert-warning" role="alert">
+                            Los campos marcados con <strong class="text-danger"> * </strong> son requeridos. 
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3 gx-5">
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control text-uppercase is-invalid" id="floatingFirstName" placeholder="primer nombre">
+                            <div id="validationFirstName" class="invalid-feedback">
+                                Por favor agregar nombre.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingFirstName validationFirstName">Primer Nombre <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control text-uppercase" id="floatingSecondName" placeholder="segundo nombre">
+                            <label class="text-black-50 fst-italic" for="floatingSecondName">Segundo Nombre</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control text-uppercase is-invalid" id="floatingLastName" placeholder="apellido paterno">
+                            <div id="validationLastName" class="invalid-feedback">
+                                Por favor agregar apellido paterno.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingLastName validationLastName">Apellido Paterno <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control text-uppercase is-invalid" id="floatingSecondLastName" placeholder="apellido materno">
+                            <div id="validationSecondLastName" class="invalid-feedback">
+                                Por favor agregar apellido materno.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSecondLastName validationSecondLastName">Apellido Materno <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control text-uppercase is-invalid" id="floatingEmail" placeholder="primer nombre">
+                            <div id="validationEmail" class="invalid-feedback">
+                                Por favor agregar correo electrónico.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingEmail validationEmail">Correo Electrónico <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="tel" class="form-control text-uppercase is-invalid" id="floatingPhone" placeholder="primer nombre">
+                            <div id="validationPhone" class="invalid-feedback">
+                                Por favor agregar celular/teléfono.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingPhone validationPhone">Celular/teléfono <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <select class="form-select is-invalid" id="floatingSelectSexo" aria-label="Floating label select example">
+                                <option selected disabled value="">Seleccione...</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                <option value="3">Otro</option>
+                            </select>
+                            <div id="validationSexo" class="invalid-feedback">
+                                Por favor seleccione el sexo.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSelectSexo validationSexo">Sexo <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control text-uppercase" id="floatingSexo" placeholder="sexo otro" disabled>
+                            <label class="text-black-50 fst-italic" for="floatingSexo">Sexo (Otro)</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="datetime" class="form-control text-uppercase is-invalid" id="floatingDate" placeholder="primer nombre">
+                            <div id="validationDate" class="invalid-feedback">
+                                Por favor agregar fecha de nacimiento.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingDate validationDate">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Cliente Activo</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="datetime" class="form-control text-uppercase is-invalid" id="floatingDate" placeholder="primer nombre">
+                            <div id="validationDate" class="invalid-feedback">
+                                Por favor agregar código postal.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingDate validationDate">Código Postal <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <select class="form-select is-invalid" id="floatingSelectState" aria-label="Floating label select example">
+                                <option selected disabled value="">Seleccione...</option>
+                                <option value="1">Guerrero</option>
+                                <option value="2">Oaxaca</option>
+                                <option value="3">México</option>
+                            </select>
+                            <div id="validationState" class="invalid-feedback">
+                                Por favor seleccione estado.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSelectState validationState">Estado <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <select class="form-select is-invalid" id="floatingSelectCity" aria-label="Floating label select example">
+                                <option selected disabled value="">Seleccione...</option>
+                                <option value="1">Chilpancingo</option>
+                                <option value="2">Quechultenango</option>
+                                <option value="3">Acapulco</option>
+                            </select>
+                            <div id="validationCity" class="invalid-feedback">
+                                Por favor seleccione ciudad.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSelectCity validationCity">Ciudad <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <select class="form-select is-invalid" id="floatingSelectMunicipy" aria-label="Floating label select example">
+                                <option selected disabled value="">Seleccione...</option>
+                                <option value="1">Chilpancingo</option>
+                                <option value="2">Quechultenango</option>
+                                <option value="3">Acapulco</option>
+                            </select>
+                            <div id="validationMunicipy" class="invalid-feedback">
+                                Por favor seleccione municipio.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSelectMunicipy validationMunicipy">Municipio <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <select class="form-select is-invalid" id="floatingSelectCommunity" aria-label="Floating label select example">
+                                <option selected disabled value="">Seleccione...</option>
+                                <option value="1">Colotlipa</option>
+                                <option value="2">Cocoyul</option>
+                                <option value="3">Parota</option>
+                            </select>
+                            <div id="validationCommunity" class="invalid-feedback">
+                                Por favor seleccione comunidad.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSelectCommunity validationCommunity">Comunidad <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <select class="form-select is-invalid" id="floatingSelectSuburb" aria-label="Floating label select example">
+                                <option selected disabled value="">Seleccione...</option>
+                                <option value="1">Colotlipa</option>
+                                <option value="2">Cocoyul</option>
+                                <option value="3">Parota</option>
+                            </select>
+                            <div id="validationSuburb" class="invalid-feedback">
+                                Por favor seleccione colonia.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSelectSuburb validationSuburb">Colonia <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+
+                <div class="col-lg-6">
+                    <div class="form-floating mb-2">
+                        <input type="text" class="form-control text-uppercase is-invalid" id="floatingFirstName" placeholder="primer nombre">
+                        <div id="validationStreet" class="invalid-feedback">
+                            Por favor agregar nombre.
+                        </div>
+                        <label class="text-black-50 fst-italic" for="floatingFirstName validationStreet">Calle <strong class="text-danger">*</strong></label>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Descripción</label>
+                    </div>
+                </div>
+                    
+
+
+                    <div class="col-12">
+                        <button type="button" class="btn btn-outline-success shadow  mb-2 rounded-3"> <i class="bi bi-sd-card-fill"> </i> Guardar</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

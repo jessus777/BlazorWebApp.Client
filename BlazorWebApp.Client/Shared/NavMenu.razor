@@ -11,24 +11,53 @@
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill" aria-hidden="true"></span> &nbsp; Home 
+                <span class="bi bi-house-door-fill" aria-hidden="true"></span> &nbsp; Panel 
             </NavLink>
         </div>
         <div class="nav-item px-3">
+            <NavLink class="nav-link" @onclick="()=>expandSubNav = !expandSubNav">
+                <span class="bi bi-people-fill" aria-hidden="true"></span> &nbsp; Clientes
+            </NavLink>
+            
+            @if (expandSubNav)
+            {
+                <ul class="nav flex-column">
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="/client/create">
+                            <i class="bi bi-person-plus-fill"> </i>  &nbsp; Crear
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="/client/update">
+                            <i class="bi bi-pencil-square"></i> &nbsp; Editar
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="/client/detle">
+                            <i class="bi bi-person-x-fill"></i> &nbsp; Eliminar
+                        </NavLink>
+                    </div>
+                    <div class="nav-item px-3">
+                        <NavLink class="nav-link" href="/client/detail">
+                            <i class="bi bi-person-lines-fill"></i> &nbsp; Detalle
+                        </NavLink>
+                    </div>
+                   
+                </ul>
+            }
+        </div>
+        <div class="nav-item px-3">
             <NavLink class="nav-link" href="employeeoverview">
-                <span class="bi bi-people-fill" aria-hidden="true"></span> &nbsp; Employee
+                <span class="bi bi-person-bounding-box" aria-hidden="true"></span> &nbsp; Usuarios
             </NavLink>
         </div>
-        @*<div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>*@
+       
     </nav>
 </div>
 
 @code {
     private bool collapseNavMenu = true;
+    private bool expandSubNav = false;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
