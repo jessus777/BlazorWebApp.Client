@@ -30,6 +30,9 @@ a, .btn-link {
 .invalid {
     outline: 1px solid red;
 }
+.zise-claendar {
+    margin-bottom: 2rem !important;
+}
 
 .validation-message {
     color: red;

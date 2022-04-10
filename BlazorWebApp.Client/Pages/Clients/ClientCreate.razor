@@ -63,7 +63,7 @@
 
                     <div class="col-lg-6">
                         <div class="form-floating mb-2">
-                            <input type="tel" class="form-control text-uppercase is-invalid" id="floatingPhone" placeholder="primer nombre">
+                            <input type="text" class="form-control text-uppercase is-invalid telphone" id="floatingPhone" placeholder="primer nombre" @onclick="InputMaskPhoneClick">
                             <div id="validationPhone" class="invalid-feedback">
                                 Por favor agregar celular/teléfono.
                             </div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                   @* <div class="col-lg-6">
                         <div class="form-floating mb-2">
                             <input type="datetime" class="form-control text-uppercase is-invalid" id="floatingDate" placeholder="primer nombre">
                             <div id="validationDate" class="invalid-feedback">
@@ -101,7 +101,19 @@
                             </div>
                             <label class="text-black-50 fst-italic" for="floatingDate validationDate">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                         </div>
+                    </div>*@
+                <div class="col-lg-6">
+                    <div class="input-group mb-2">
+                        <div class="form-floating mb-2 flex-grow-1">
+                            <input type="datetime" class="form-control text-uppercase is-invalid" id="floatingDate" ata-date-format="dd/mm/yyyy" placeholder="primer nombre" value="" disabled>
+                            <div id="validationDate" class="invalid-feedback">
+                                Por favor agregar fecha de nacimiento.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingDate validationDate">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
+                        </div>
+                        <button id="selectDate" type="button" class="input-group-text zise-claendar btn btn-outline-primary bg-light" @onclick="SelectDate"><i class="bi bi-calendar-day-fill text-muted bg-light"></i></button>
                     </div>
+                </div>
 
                     <div class="col-lg-6">
                         <div class="form-check form-switch mb-2">
@@ -211,9 +223,23 @@
                         <label class="text-black-50 fst-italic" for="floatingTextarea2">Descripción</label>
                     </div>
                 </div>
-                    
+                
+                <div class="col-lg-6">
+                    <div class="form-floating mb-2">
+                        <select class="form-select is-invalid js-example-basic-single" id="floatingSelectCity" aria-label="Floating label select example" @onclick="Select2Demo">
+                            <option selected disabled value="">Seleccione...</option>
+                            <option value="1">Chilpancingo</option>
+                            <option value="2">Quechultenango</option>
+                            <option value="3">Acapulco</option>
+                        </select>
+                        <div id="validationCity" class="invalid-feedback">
+                            Por favor seleccione ciudad.
+                        </div>
+                        <label class="text-black-50 fst-italic" for="floatingSelectCity validationCity">Ciudad <strong class="text-danger">*</strong></label>
+                    </div>
+                </div>
 
-
+                @* <input data-provide="datepicker" @onclick="SelectDate">*@
                     <div class="col-12">
                         <button type="button" class="btn btn-outline-success shadow  mb-2 rounded-3"> <i class="bi bi-sd-card-fill"> </i> Guardar</button>
                     </div>
