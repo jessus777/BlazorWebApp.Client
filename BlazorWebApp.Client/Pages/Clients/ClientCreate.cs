@@ -11,7 +11,7 @@ namespace BlazorWebApp.Client.Pages.Clients
         protected override async Task OnInitializedAsync()
         {
             //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
-            await JsRuntime.InvokeVoidAsync("Select2demo");
+            //await JsRuntime.InvokeVoidAsync("Select2demo");
         }
 
         protected async Task InputMaskPhoneClick()

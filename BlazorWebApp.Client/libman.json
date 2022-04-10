@@ -30,10 +30,6 @@
       "destination": "wwwroot/jquery/"
     },
     {
-      "library": "select2@4.0.13",
-      "destination": "wwwroot/lib/select2/"
-    },
-    {
       "library": "limonte-sweetalert2@11.4.8",
       "destination": "wwwroot/lib/sweetalert2/"
     },
@@ -61,5 +57,17 @@
         "css/bootstrap-datepicker3.standalone.min.css"
       ]
     }
-  ]
+  ,
+{
+  "provider": "jsdelivr",
+  "library": "select2@4.1.0-rc.0",
+  "destination": "wwwroot/lib/select2/"
+}
+,
+{
+  "provider": "jsdelivr",
+  "library": "select2-bootstrap-5-theme@1.2.0",
+  "destination": "wwwroot/css/select2-bootstrap-5-theme/"
+}
+]
 }

@@ -8,7 +8,7 @@
                 <div class="row justify-content-center">
                     <div class="col-10">
                         <div class="alert alert-warning" role="alert">
-                            Los campos marcados con <strong class="text-danger"> * </strong> son requeridos. 
+                            Los campos marcados con <strong class="text-danger"> * </strong> son requeridos.
                         </div>
                     </div>
                 </div>
@@ -92,28 +92,18 @@
                             <label class="text-black-50 fst-italic" for="floatingSexo">Sexo (Otro)</label>
                         </div>
                     </div>
-
-                   @* <div class="col-lg-6">
-                        <div class="form-floating mb-2">
-                            <input type="datetime" class="form-control text-uppercase is-invalid" id="floatingDate" placeholder="primer nombre">
-                            <div id="validationDate" class="invalid-feedback">
-                                Por favor agregar fecha de nacimiento.
+                    <div class="col-lg-6">
+                        <div class="input-group mb-2">
+                            <div class="form-floating mb-2 flex-grow-1">
+                                <input type="datetime" class="form-control text-uppercase is-invalid" id="floatingDate" ata-date-format="dd/mm/yyyy" placeholder="primer nombre" value="" disabled>
+                                <div id="validationDate" class="invalid-feedback">
+                                    Por favor agregar fecha de nacimiento.
+                                </div>
+                                <label class="text-black-50 fst-italic" for="floatingDate validationDate">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                             </div>
-                            <label class="text-black-50 fst-italic" for="floatingDate validationDate">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
+                            <button id="selectDate" type="button" class="input-group-text zise-claendar btn btn-outline-primary bg-light" @onclick="SelectDate"><i class="bi bi-calendar-day-fill text-muted bg-light"></i></button>
                         </div>
-                    </div>*@
-                <div class="col-lg-6">
-                    <div class="input-group mb-2">
-                        <div class="form-floating mb-2 flex-grow-1">
-                            <input type="datetime" class="form-control text-uppercase is-invalid" id="floatingDate" ata-date-format="dd/mm/yyyy" placeholder="primer nombre" value="" disabled>
-                            <div id="validationDate" class="invalid-feedback">
-                                Por favor agregar fecha de nacimiento.
-                            </div>
-                            <label class="text-black-50 fst-italic" for="floatingDate validationDate">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
-                        </div>
-                        <button id="selectDate" type="button" class="input-group-text zise-claendar btn btn-outline-primary bg-light" @onclick="SelectDate"><i class="bi bi-calendar-day-fill text-muted bg-light"></i></button>
                     </div>
-                </div>
 
                     <div class="col-lg-6">
                         <div class="form-check form-switch mb-2">
@@ -132,9 +122,23 @@
                         </div>
                     </div>
 
+                    @*<div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                        <select class="form-select is-invalid" id="floatingSelectState" aria-label="Floating label select example">
+                        <option selected disabled value="">Seleccione...</option>
+                        <option value="1">Guerrero</option>
+                        <option value="2">Oaxaca</option>
+                        <option value="3">México</option>
+                        </select>
+                        <div id="validationState" class="invalid-feedback">
+                        Por favor seleccione estado.
+                        </div>
+                        <label class="text-black-50 fst-italic" for="floatingSelectState validationState">Estado <strong class="text-danger">*</strong></label>
+                        </div>
+                        </div>*@
                     <div class="col-lg-6">
                         <div class="form-floating mb-2">
-                            <select class="form-select is-invalid" id="floatingSelectState" aria-label="Floating label select example">
+                            <select class="form-select is-invalid" id="floatingSelectState" aria-label="Floating label select example"  @onclick="Select2Demo">
                                 <option selected disabled value="">Seleccione...</option>
                                 <option value="1">Guerrero</option>
                                 <option value="2">Oaxaca</option>
@@ -207,39 +211,39 @@
                         </div>
                     </div>
 
-                <div class="col-lg-6">
-                    <div class="form-floating mb-2">
-                        <input type="text" class="form-control text-uppercase is-invalid" id="floatingFirstName" placeholder="primer nombre">
-                        <div id="validationStreet" class="invalid-feedback">
-                            Por favor agregar nombre.
+                    <div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control text-uppercase is-invalid" id="floatingFirstName" placeholder="primer nombre">
+                            <div id="validationStreet" class="invalid-feedback">
+                                Por favor agregar nombre.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingFirstName validationStreet">Calle <strong class="text-danger">*</strong></label>
                         </div>
-                        <label class="text-black-50 fst-italic" for="floatingFirstName validationStreet">Calle <strong class="text-danger">*</strong></label>
                     </div>
-                </div>
 
-                <div class="col-lg-6">
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label class="text-black-50 fst-italic" for="floatingTextarea2">Descripción</label>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="form-floating mb-2">
-                        <select class="form-select is-invalid js-example-basic-single" id="floatingSelectCity" aria-label="Floating label select example" @onclick="Select2Demo">
-                            <option selected disabled value="">Seleccione...</option>
-                            <option value="1">Chilpancingo</option>
-                            <option value="2">Quechultenango</option>
-                            <option value="3">Acapulco</option>
-                        </select>
-                        <div id="validationCity" class="invalid-feedback">
-                            Por favor seleccione ciudad.
+                    <div class="col-lg-6">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label class="text-black-50 fst-italic" for="floatingTextarea2">Descripción</label>
                         </div>
-                        <label class="text-black-50 fst-italic" for="floatingSelectCity validationCity">Ciudad <strong class="text-danger">*</strong></label>
                     </div>
-                </div>
 
-                @* <input data-provide="datepicker" @onclick="SelectDate">*@
+                    @*<div class="col-lg-6">
+                        <div class="form-floating mb-2">
+                            <select class="form-select is-invalid js-example-basic-single" id="floatingSelectCity" aria-label="Floating label select example" @onclick="Select2Demo">
+                                <option selected disabled value="">Seleccione...</option>
+                                <option value="1">Chilpancingo</option>
+                                <option value="2">Quechultenango</option>
+                                <option value="3">Acapulco</option>
+                            </select>
+                            <div id="validationCity" class="invalid-feedback">
+                                Por favor seleccione ciudad.
+                            </div>
+                            <label class="text-black-50 fst-italic" for="floatingSelectCity validationCity">Ciudad <strong class="text-danger">*</strong></label>
+                        </div>
+                    </div>
+*@
+                    @* <input data-provide="datepicker" @onclick="SelectDate">*@
                     <div class="col-12">
                         <button type="button" class="btn btn-outline-success shadow  mb-2 rounded-3"> <i class="bi bi-sd-card-fill"> </i> Guardar</button>
                     </div>
